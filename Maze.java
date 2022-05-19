@@ -173,7 +173,7 @@ public class Maze {
      * This method returns the actual value of the node/cell of the maze
      * @param row
      * @param col
-     * @return
+     * @return Returns the cost of value of the cell
      */
     public int getValue(int row, int col){
         return this.maze[row][col].nodeValue;
