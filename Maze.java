@@ -186,6 +186,11 @@ public class Maze {
             return false;
     }
 
+    /**
+     * Method to get the size N of the maze
+     * @param maze
+     * @return The int size
+     */
     public int getSize(Maze maze){
         return this.maze[0].length;
     }
@@ -201,28 +206,34 @@ public class Maze {
         }
     }
 
+    /**
+     * Method to get the probability a cell is blocked
+     * @return
+     */
     public double getprob (){
        return this.prob;
     }
 
+
+    /**
+     * This method implements the heuristic function.
+     * @param start Starting Node position
+     * @param first First terminal state
+     * @param second Second terminal state
+     * @return The lowest heuristic cost
+     */
     public double heuristicCost (Node start, Node first, Node second){
         double firstCost;
         double secondCost;
-        double tmpX;
-        double tmpY;
-        int test = abs(start.row - first.row) ;
-        int test2 = abs(start.column - second.column) ;
 
-        //firstCost = Math.sqrt(firstCost) - test*0.5;
-        firstCost = test*0.25 + test2*0.25;
+        int xDif = abs(start.row - first.row) ;
+        int yDif = abs(start.column - first.column) ;
 
-        tmpX = start.row - second.row;
-        tmpX = Math.pow(tmpX, 2);
-        tmpY = start.column - second.column;
-        tmpY = Math.pow(tmpY,2);
-        secondCost = tmpX + tmpY;
-        //secondCost = Math.sqrt(secondCost) - test2*0.5;
-        secondCost = test2*0.25 + test*0.25;
+        firstCost = xDif*0.25 + yDif*0.25;
+
+        xDif = abs(start.row - second.row) ;
+        yDif = abs(start.column - second.column) ;
+        secondCost = xDif*0.25 + yDif*0.25;
 
 
         if (firstCost < secondCost)
