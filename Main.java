@@ -9,13 +9,13 @@ public class Main {
 
     public static void main (String[] args) {
 
-         int mazeSize;
-         Node initialState;
-         Node firstTerminalState;
-         Node secondTerminalState;
-         double obstacleProb;
-         Node startingState;
-         ArrayList<Node> terminalStates= new ArrayList<Node>();
+        int mazeSize;
+        Node initialState;
+        Node firstTerminalState;
+        Node secondTerminalState;
+        double obstacleProb;
+        Node startingState;
+        ArrayList<Node> terminalStates= new ArrayList<Node>();
         Maze maze;
         Scanner scanner = new Scanner(System.in);
         int x = 0;
@@ -72,7 +72,7 @@ public class Main {
         Context c = new Context(maze);
         c.configureContext((Strategy) new UCS(startingState,terminalStates,maze));
         c.dowork();
-        c.configureContext((Strategy) new aStar(startingState,terminalStates,maze));
+        c.configureContext((Strategy) new Astar(startingState,terminalStates,maze));
         c.dowork();
 
 

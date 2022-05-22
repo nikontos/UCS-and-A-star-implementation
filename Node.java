@@ -62,6 +62,11 @@ public class Node {
             return false;
     }
 
+    /**
+     * This method returns an Array list with the minimum path from the Starting State to the Terminal State
+     * @param node
+     * @return
+     */
     public ArrayList printPath ( Node node){
         ArrayList<Node> path = new ArrayList<>();
         Node tmp;

@@ -11,12 +11,6 @@ public class Context {
     }
 
     public void dowork(){
-        //
-        //
-        //
-        strategy.executeAlgorithm(f);
-        //
-        //
-        //
+        strategy.executeAlgorithm();
     }
 }

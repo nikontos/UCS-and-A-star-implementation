@@ -173,7 +173,7 @@ public class Maze {
      * This method returns the actual value of the node/cell of the maze
      * @param row
      * @param col
-     * @return Returns the cost of value of the cell
+     * @return
      */
     public int getValue(int row, int col){
         return this.maze[row][col].nodeValue;
@@ -216,8 +216,8 @@ public class Maze {
 
 
     /**
-     * This method implements the heuristic function.
-     * @param start Starting Node position
+     * This method implements the heuristic function which is h =|x1-x2|*0.25 + |y1-y2|*0.25
+     * @param start Current Node
      * @param first First terminal state
      * @param second Second terminal state
      * @return The lowest heuristic cost
@@ -243,3 +243,5 @@ public class Maze {
 
     }
 }
+
+
