@@ -8,7 +8,7 @@ Calculates the minimum path within the maze, from a Starting state to the closes
 Similar to UCS but in order to find the miminum path uses a heuristic function.
 
 ## Execution
-Clone the repository \br
+Clone the repository <\br>
 Open the terminal
 
 To compile :
@@ -30,7 +30,7 @@ This class implements the UCS algorithm
 
 ### Maze.java
 
-This class implenets various functions of the maze. The maze is populated with Node objects. /br
+This class implenets various functions of the maze. The maze is populated with Node objects. </br>
 Also in this class some other functions are also implemented like calculating legal moves and the heuristic function.
 
 ### Node.java
